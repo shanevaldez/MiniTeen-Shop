@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniteen Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="shop-banner">
+        <h1>MINITEEN SHOP</h1>
+    </header>
+
+    <input type="checkbox" id="cart-tumbler" class="cart-logic">
+    <input type="checkbox" id="cart-keychain" class="cart-logic">
+    <input type="checkbox" id="cart-holder" class="cart-logic">
+    <input type="checkbox" id="cart-plushie" class="cart-logic">
+
+    <input type="radio" name="t-size" id="t16" checked>
+    <input type="radio" name="t-size" id="t22">
+    <input type="radio" name="t-size" id="t32">
+
+    <input type="radio" name="p-size" id="ps" checked>
+    <input type="radio" name="p-size" id="pm">
+    <input type="radio" name="p-size" id="pl">
+
+    <input type="radio" name="k-member" id="k-the8" checked>
+    <input type="radio" name="k-member" id="k-mingyu">
+    <input type="radio" name="k-member" id="k-scoups">
+    <input type="radio" name="k-member" id="k-jeonghan">
+    <input type="radio" name="k-member" id="k-joshua">
+    <input type="radio" name="k-member" id="k-woozi">
+    <input type="radio" name="k-member" id="k-jun">
+    <input type="radio" name="k-member" id="k-wonwoo">
+    <input type="radio" name="k-member" id="k-dk">
+    <input type="radio" name="k-member" id="k-hoshi">
+    <input type="radio" name="k-member" id="k-vernon">
+    <input type="radio" name="k-member" id="k-seungkwan">
+    <input type="radio" name="k-member" id="k-dino">
+
+    <input type="radio" name="h-member" id="h-the8" checked>
+    <input type="radio" name="h-member" id="h-mingyu">
+    <input type="radio" name="h-member" id="h-scoups">
+    <input type="radio" name="h-member" id="h-jeonghan">
+    <input type="radio" name="h-member" id="h-joshua">
+    <input type="radio" name="h-member" id="h-woozi">
+    <input type="radio" name="h-member" id="h-jun">
+    <input type="radio" name="h-member" id="h-wonwoo">
+    <input type="radio" name="h-member" id="h-dk">
+    <input type="radio" name="h-member" id="h-hoshi">
+    <input type="radio" name="h-member" id="h-vernon">
+    <input type="radio" name="h-member" id="h-seungkwan">
+    <input type="radio" name="h-member" id="h-dino">
+
+    <div class="main-layout">
+        <aside class="sidebar">
+            <nav class="main-nav">
+                <button class="nav-btn">Home</button>
+                <button class="nav-btn active">Products</button>
+                <button class="nav-btn">Sale</button>
+            </nav>
+
+            <div class="cart-section">
+                <h3>Your Cart</h3>
+                <ul class="cart-display">
+                    <li class="item-tumbler">Tumbler <label for="cart-tumbler" class="remove-btn">&times;</label></li>
+                    <li class="item-keychain">Keychain <label for="cart-keychain" class="remove-btn">&times;</label></li>
+                    <li class="item-holder">Holder <label for="cart-holder" class="remove-btn">&times;</label></li>
+                    <li class="item-plushie">Plushie <label for="cart-plushie" class="remove-btn">&times;</label></li>
+                </ul>
+                
+                <div class="cart-total-display">
+                    <p>Total: <span id="final-total">₱0</span></p>
+                    <div class="checkout-footer">
+                        <button class="checkout-btn" onclick="checkout()">CHECK OUT</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="product-container">
+                
+                <section class="product-card">
+                    <img src="tumbler.jpg" alt="Tumbler" class="main-img">
+                    <div class="product-details">
+                        <h1>Miniteen Tumbler</h1>
+                        <span class="category-tag">Drinkware</span>
+                        <p class="card-desc">Keep your drinks cold with style.</p>
+                        <div class="price-box">
+                            <span class="price p16">₱1,550</span>
+                            <span class="price p22">₱2,250</span>
+                            <span class="price p32">₱2,999</span>
+                        </div>
+                        <div class="custom-select">
+                            <div class="select-trigger">
+                                <span>Size: </span>
+                                <span class="label-16">16oz</span>
+                                <span class="label-22">22oz</span>
+                                <span class="label-32">32oz</span>
+                            </div>
+                            <div class="options">
+                                <label for="t16">16oz - ₱1,550</label>
+                                <label for="t22">22oz - ₱2,250</label>
+                                <label for="t32">32oz - ₱2,999</label>
+                            </div>
+                        </div>
+                        <label for="cart-tumbler" class="add-btn">Add to Cart</label>
+                    </div>
+                </section>
+
+                <section class="product-card">
+                    <img src="plushie.jpg" alt="Plushie" class="main-img">
+                    <div class="product-details">
+                        <h1>Miniteen Plushie</h1>
+                        <span class="category-tag">Collectible</span>
+                        <div class="price-box">
+                            <span class="price ps">₱1,850</span>
+                            <span class="price pm">₱2,500</span>
+                            <span class="price pl">₱3,500</span>
+                        </div>
+                        <div class="custom-select">
+                            <div class="select-trigger">
+                                <span>Size: </span>
+                                <span class="label-s">Small</span>
+                                <span class="label-m">Medium</span>
+                                <span class="label-l">Large</span>
+                            </div>
+                            <div class="options">
+                                <label for="ps">Small - ₱1,850</label>
+                                <label for="pm">Medium - ₱2,500</label>
+                                <label for="pl">Large - ₱3,500</label>
+                            </div>
+                        </div>
+                        <label for="cart-plushie" class="add-btn">Add to Cart</label>
+                    </div>
+                </section>
+
+                <section class="product-card">
+                    <img src="keychain.jpg" alt="Keychain" class="main-img">
+                    <div class="product-details">
+                        <h1>Miniteen Keychain</h1>
+                        <div class="price-box"><span class="price">₱450</span></div>
+                        <div class="custom-select">
+                            <div class="select-trigger">
+                                <span>Member: </span>
+                                <span class="label-the8">The8</span>
+                                <span class="label-mingyu">Mingyu</span>
+                                <span class="label-scoups">S.Coups</span>
+                                <span class="label-jeonghan">Jeonghan</span>
+                                <span class="label-joshua">Joshua</span>
+                                <span class="label-woozi">Woozi</span>
+                                <span class="label-jun">Junhui</span>
+                                <span class="label-wonwoo">Wonwoo</span>
+                                <span class="label-dk">DK</span>
+                                <span class="label-hoshi">Hoshi</span>
+                                <span class="label-vernon">Vernon</span>
+                                <span class="label-seungkwan">Seungkwan</span>
+                                <span class="label-dino">Dino</span>
+                            </div>
+                            <div class="options">
+                                <label for="k-the8">The8 - ₱450</label>
+                                <label for="k-mingyu">Mingyu - ₱450</label>
+                                <label for="k-scoups">S.Coups - ₱450</label>
+                                <label for="k-jeonghan">Jeonghan - ₱450</label>
+                                <label for="k-joshua">Joshua - ₱450</label>
+                                <label for="k-woozi">Woozi - ₱450</label>
+                                <label for="k-jun">Junhui - ₱450</label>
+                                <label for="k-wonwoo">Wonwoo - ₱450</label>
+                                <label for="k-dk">DK - ₱450</label>
+                                <label for="k-hoshi">Hoshi - ₱450</label>
+                                <label for="k-vernon">Vernon - ₱450</label>
+                                <label for="k-seungkwan">Seungkwan - ₱450</label>
+                                <label for="k-dino">Dino - ₱450</label>
+                            </div>
+                        </div>
+                        <label for="cart-keychain" class="add-btn">Add to Cart</label>
+                    </div>
+                </section>
+
+                <section class="product-card">
+                    <img src="photocard-holder.jpg" alt="Holder" class="main-img">
+                    <div class="product-details">
+                        <h1>Photocard Holder</h1>
+                        <div class="price-box"><span class="price">₱680</span></div>
+                        <div class="custom-select">
+                            <div class="select-trigger">
+                                <span>Member: </span>
+                                <span class="label-h-the8">The8</span>
+                                <span class="label-h-mingyu">Mingyu</span>
+                                <span class="label-h-scoups">S.Coups</span>
+                                <span class="label-h-jeonghan">Jeonghan</span>
+                                <span class="label-h-joshua">Joshua</span>
+                                <span class="label-h-woozi">Woozi</span>
+                                <span class="label-h-jun">Junhui</span>
+                                <span class="label-h-wonwoo">Wonwoo</span>
+                                <span class="label-h-dk">DK</span>
+                                <span class="label-h-hoshi">Hoshi</span>
+                                <span class="label-h-vernon">Vernon</span>
+                                <span class="label-h-seungkwan">Seungkwan</span>
+                                <span class="label-h-dino">Dino</span>
+                            </div>
+                            <div class="options">
+                                <label for="h-the8">The8 - ₱680</label>
+                                <label for="h-mingyu">Mingyu - ₱680</label>
+                                <label for="h-scoups">S.Coups - ₱680</label>
+                                <label for="h-jeonghan">Jeonghan - ₱680</label>
+                                <label for="h-joshua">Joshua - ₱680</label>
+                                <label for="h-woozi">Woozi - ₱680</label>
+                                <label for="h-jun">Junhui - ₱680</label>
+                                <label for="h-wonwoo">Wonwoo - ₱680</label>
+                                <label for="h-dk">DK - ₱680</label>
+                                <label for="h-hoshi">Hoshi - ₱680</label>
+                                <label for="h-vernon">Vernon - ₱680</label>
+                                <label for="h-seungkwan">Seungkwan - ₱680</label>
+                                <label for="h-dino">Dino - ₱680</label>
+                            </div>
+                        </div>
+                        <label for="cart-holder" class="add-btn">Add to Cart</label>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCheckout()">&times;</span>
+            <div class="checkout-header">
+                <h2>🛒 CHECKOUT</h2>
+            </div>
+            <div class="checkout-grid">
+                <div class="checkout-forms">
+                    <section class="form-group">
+                        <h3>📋 DELIVERY INFORMATION</h3>
+                        <div class="name-row">
+                            <input type="text" placeholder="First Name">
+                            <input type="text" placeholder="Last Name">
+                        </div>
+                        <input type="text" placeholder="Contact Number">
+                        <textarea placeholder="Complete Address"></textarea>
+                    </section>
+                </div>
+                <div class="checkout-sidebar">
+                    <div class="order-summary-box">
+                        <h3>📙 ORDER SUMMARY</h3>
+                        <div class="summary-line"><span>Total</span> <span id="summary-total" style="color: #ff6b6b;">₱0</span></div>
+                    </div>
+                    <button class="place-order-btn" onclick="confirmOrder()">⚡ PLACE ORDER NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculateTotal() {
+            let total = 0;
+
+            if (document.getElementById('cart-tumbler').checked) {
+                if (document.getElementById('t16').checked) total += 1550;
+                else if (document.getElementById('t22').checked) total += 2250;
+                else if (document.getElementById('t32').checked) total += 2999;
+            }
+
+            if (document.getElementById('cart-plushie').checked) {
+                if (document.getElementById('ps').checked) total += 1850;
+                else if (document.getElementById('pm').checked) total += 2500;
+                else if (document.getElementById('pl').checked) total += 3500;
+            }
+
+            if (document.getElementById('cart-keychain').checked) total += 450;
+            
+            if (document.getElementById('cart-holder').checked) total += 680;
+
+            const formattedTotal = "₱" + total.toLocaleString();
+            document.getElementById('final-total').innerText = formattedTotal;
+            return formattedTotal;
+        }
+
+        function checkout() {
+            let totalText = calculateTotal();
+            if (totalText === "₱0") {
+                alert("Your cart is empty!");
+                return;
+            }
+            document.getElementById('summary-total').innerText = totalText;
+            document.getElementById('checkout-modal').style.display = "block";
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkout-modal').style.display = "none";
+        }
+
+        function confirmOrder() {
+            alert("🚀 Order Placed Successfully!");
+            window.location.reload(); 
+        }
+
+        document.body.addEventListener('click', () => {
+            setTimeout(calculateTotal, 10);
+        });
+    </script>
+</body>
+</html>
